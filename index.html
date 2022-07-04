@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Voting App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/media-queries.css" />
+    <!-- The next 2 scripts are the one that allow us to connect to the moralis functions in our project-->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+</head>
+
+<body onload=charge()>
+    <!-- APP -->
+    <div id="app">
+        <div class="app-overlay"></div>
+        <!-- HEADER --> 
+        <header>
+            <div class="logo">
+                <img src="images/star.svg">
+                <h1>ELECTION</h1>
+                <input class="text" placeholder="Wallet Address" type="text" id="walletAddress">
+                <button class="atv" id="btn-AllowToVote">Allow To Vote</button>
+            </div>
+        </header>
+        <!-- MAIN-->
+        <main>
+            <div class="cards">
+                <div class="card">
+                    <img class="card-image" src="./images/trump.jpg">
+                    <div class="card-info">
+                        <div class="candidate-votes">
+                            <span class="votes-number-trump">0</span>
+                            <span class="votes-text">VOTES</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="candidate-info">
+                            <span class="candidate-name">Donald Trump</span>
+                            <span class="candidate-party">Republican Party</span>
+                        </div>
+                    </div>
+                    <button class="card-btn btn-trump" id="btn-trump">VOTE</button>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="./images/biden.jpg">
+                    <div class="card-info">
+                        <div class="candidate-votes">
+                            <span class="votes-number-biden">0</span>
+                            <span class="votes-text">VOTES</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="candidate-info">
+                            <span class="candidate-name">Joe Biden</span>
+                            <span class="candidate-party">Democratic Party</span>
+                        </div>
+                    </div>
+                    <button class="card-btn btn-biden" id="btn-biden">VOTE</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
